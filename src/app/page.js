@@ -82,11 +82,13 @@ const styles = {
     padding: '0 1.5rem',
     maxWidth: '90%',
   },
-  title: {
-    fontSize: '3rem',
-    fontWeight: 'bold',
-    marginBottom: '1rem',
-  },
+ title: {
+  fontSize: 'clamp(2rem, 6vw, 3rem)', 
+  fontWeight: 'bold',
+  marginBottom: '1rem',
+  wordBreak: 'break-word',
+  lineHeight: 1.2,
+},
   subtitle: {
     fontSize: '1.25rem',
     marginBottom: '2rem',
