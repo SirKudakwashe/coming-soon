@@ -3,10 +3,11 @@
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const launchDate = new Date('2025-10-01T00:00:00Z');
+
   const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
+      const launchDate = new Date('2025-10-01T00:00:00Z');
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = launchDate.getTime() - now;
@@ -33,7 +34,7 @@ export default function Home() {
       <div style={styles.overlay}></div>
       <div style={styles.content}>
         <h1 style={styles.title}>🚀 Coming Soon</h1>
-        <p style={styles.subtitle}>We’re building something amazing. Stay tuned.</p>
+        <p style={styles.subtitle}>We are building something amazing. Stay tuned.</p>
 
         {timeLeft.days !== undefined ? (
           <div style={styles.countdown}>
@@ -43,7 +44,7 @@ export default function Home() {
             <span>{timeLeft.seconds}s</span>
           </div>
         ) : (
-          <p style={styles.launched}>We're live!</p>
+          <p style={styles.launched}>We are live!</p>
         )}
 
         <p style={styles.footer}>© 2025 Hosm. All rights reserved.</p>
